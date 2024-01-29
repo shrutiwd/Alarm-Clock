@@ -16,8 +16,8 @@ The program utilizes the `datetime`, `time`, `winsound`, and `pyttsx3` libraries
 1. Clone the repository or download the script:
 
     ```bash
-    git clone <repository-url>
-    cd <repository-directory>
+    git clone https://github.com/shrutiwd/Alarm-Clock.git
+    cd Alarm-Clock
     ```
 
 2. Ensure you have Python installed on your system.
