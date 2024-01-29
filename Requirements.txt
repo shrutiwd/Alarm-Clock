@@ -1,0 +1,51 @@
+TO SET ALARM CLOCK
+
+Requirements:
+1. install datetime, winsound, pyttsx3 libraries from cmd
+
+
+Need of project:-	
+1. To inculcate time management
+2. Avoid procrastination
+3. To create alerts for the users
+
+
+Explanation:
+a) import required libraries
+	
+	1. import winsound-		for playing sound (ringtones for alarm, .wav format)
+	2. import time-		for sleep (snooze purpose)
+	3. import datetime-		for getting current time and comparing time for setting alarm
+	4. import pyttsx3-		for text-to-speech conversion of time that is set for alarm
+	5. import sys-		for exiting the system when alarm is dismissed
+
+b)Inputs:
+1. form - 	Takes input from user in either 12Hr format or 24Hr format
+         	1=input in 12Hr format
+	2=input in 24Hr format
+
+c) Created a class named Alarm - to represent the working of an Alarm clock
+
+d) Created a constructor - Intialize the instance variables
+
+e)Created methods:
+1. h12()-	Sets alarm in 12Hrs format 
+           	displays a message when alarm is set that "alarm set for {hour}:{minutes} {am/pm} on {date}"
+
+2. h24()-	Sets alarm in 24Hr format
+	 displays a message when alarm is set that "alarm set for {hour}:{minutes} Hours on {date}"
+
+f) Calling function accordingly:
+1]if form==	1 - call h12()
+	       	File opened and message saved in file that "alarm set for {hour}:{minutes} {am/pm} on {date}" 
+2]if form==	2 - call h24()
+	       	File opened and message saved in file as "alarm set for {hour}:{minutes} Hours on {date}"
+
+
+Important notes:
+1. All the ringtone files also need to be extracted in the same path along with the code (ringtones with .wav format will work with winsound)
+2. strftime()	-	saves time in string format
+3. %H:%M		-	gets only hours and minutes from current time, in 24Hr format
+4. %I:%M %p 	-	gets hours minutes from current time, in 12Hr format. %p gets AM/PM from current time
+5. "%02d" 		- 	pads "0" if number is single digit (i.e  if user enters "1", it will become "01")
+6. Check 'History.txt' for alarm history
